@@ -85,7 +85,8 @@ console.log(`El nombre más largo del array es ${masLargo}`);
 
 
 
-/*3. Separar datos mixtos
+/*
+3. Separar datos mixtos
 Dado el siguiente array mixto:
 */
 const datos = [42, "Hola", true, 3.14, "Mundo", false, 100, "JavaScript"];
@@ -133,15 +134,33 @@ console.log(sumanumeros);
 
 
 
-/*4. Crear un array bidimensional
+/*
+4. Crear un array bidimensional
 Dado el siguiente array:
 */
 
 const personas = ["Alice", 25, "Bob", 30, "Charlie", 35, "Diana", 40];
 
-
 //a) Convierte este array en un array bidimensional donde cada subarray contenga un nombre y su edad. Ejemplo: ["Alice", 25].
+let biDi = []
+for (let i = 0; i < personas.length ; i++) {
+    if (i % 2 == 0) {
+        biDi.push([personas[i], personas[i+1]])
+    }
+}
+
+console.log(biDi);
+
 //b) Crea un nuevo array que contenga solo los nombres de las personas mayores de 30 años.
+let mayTrenta = []
+
+for (names of biDi) {
+    if (names[1] >= 30){
+        mayTrenta.push(names[0])
+    }
+}
+console.log(mayTrenta);
+
 
 
 /*
@@ -160,7 +179,8 @@ const matriz = [
 //c) Encuentra el número más grande de la matriz.
 
 
-/*6. Operaciones con strings
+/*
+6. Operaciones con strings
 Dado el siguiente array de palabras:
 */
 
@@ -172,7 +192,8 @@ const palabras = ["sol", "luna", "estrella", "cielo", "mar", "tierra", "fuego"];
 //c) Ordena las palabras alfabéticamente.
 
 
-/*7. Operaciones con números
+/*
+7. Operaciones con números
 Dado el siguiente array de números:
 */
 
@@ -183,7 +204,8 @@ const numeros = [3, 7, 2, 9, 4, 6, 1, 8, 5];
 //c) Crea un nuevo array con los números multiplicados por 2.
 
 
-/*8. Contar letras
+/*
+8. Contar letras
 Dado el siguiente array de nombres:
 */
 
@@ -195,7 +217,8 @@ const nombres2 = ["Ana", "Luis", "Carlos", "María", "Pedro", "Lucía", "Juan"];
 //c) Crea un nuevo array con los nombres invertidos (por ejemplo, "Ana" → "anA").
 
 
-/*9. Crear un carrito de compras
+/*
+9. Crear un carrito de compras
 Dado el siguiente array:
 */
 
@@ -212,7 +235,8 @@ const carrito = [
 //c) Crea un nuevo array que contenga solo los nombres de los productos cuyo precio unitario sea mayor a 20.
 
 
-/*10. Contar tipos de datos
+/*
+10. Contar tipos de datos
 Dado el siguiente array:
 */
 
