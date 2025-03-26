@@ -137,3 +137,47 @@ document.getElementById('platano').addEventListener('click', () => {
 })
 
 
+/*
+otra version mas corta, adaptar a unidades para pinya y aguacate
+
+// Objeto con las frutas y sus precios
+const frutas = {
+    pomelo: 2.50,
+    kiwi: 4.20,
+    limon: 1.20,
+    sandia: 1.20,
+    freson: 6.20,
+    mandarina: 1.90,
+    fuji: 3.00,
+    platano : 3.20,
+    pera: 1.80,
+    golden: 3.50
+};
+
+// Función que se ejecuta cuando se hace clic en una fruta
+function seleccionarFruta(frutaSeleccionada) {
+  let cantidad = prompt(`¿Cuántos kg de ${frutaSeleccionada} deseas?`);
+  
+  if (cantidad <= 0 || isNaN(cantidad) || !cantidad) {
+    alert('Por favor ingresa una cantidad válida');
+    return;
+  }
+
+  let precio = frutas[frutaSeleccionada];  // Accedemos al precio de la fruta seleccionada
+  let totalFruta = (parseFloat(cantidad) * precio).toFixed(2);  // Calculamos el total con 2 decimales
+  
+  let mensajeCarrito = document.getElementById('carrito');
+  mensajeCarrito.innerHTML += `${frutaSeleccionada.charAt(0).toUpperCase() + frutaSeleccionada.slice(1)}: ${cantidad} kg x ${precio}€/kg = ${totalFruta} € <br>`;
+}
+
+// Asignar el evento a cada fruta usando un bucle
+for (let fruta in frutas) {
+  // Usamos `fruta` para obtener el nombre de la fruta
+  const elementoFruta = document.getElementById(fruta);
+  if (elementoFruta) {
+    elementoFruta.addEventListener('click', () => {
+      seleccionarFruta(fruta);  // Llamamos a la función y le pasamos el nombre de la fruta
+    });
+  }
+}
+  */
